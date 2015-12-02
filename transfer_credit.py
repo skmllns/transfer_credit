@@ -10,7 +10,8 @@ with open("Transfer Credit Report by Institution.txt") as trans_file:
 
 inst_patt_regex = re.compile(r'(?<=Transfer Institution:).*')
 
-inf = open('transfer_crs_table.csv', 'wb')
+file_name = raw_input("Please enter the file name: ")
+inf = open(file_name, 'wb')
 crs_writer = csv.writer(inf)
 crs_writer.writerow(header)
 
